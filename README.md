@@ -1,17 +1,16 @@
-﻿Vmd: Visualizador de modelos de quake II
+Visualizador de Modelos de Quake II
 ===============================
 Versión: 1.0.0b 
 
+![ScreenShot](https://raw.github.com/jhcasado/screenshots/master/Quake_II_Model_Viewer/vmd_01.png)
 
 0. EQUIPO RECOMENDADO
-
    * Windows 95, 98, ME, XP, 2000, NT o Vista
    * Tarjeta aceleradora 3D.
    * Escritorio de Windows en 16, 24 o 32 bpp.
 
 
 1. CARACTERÍTICAS
- 
    * Permite cambiar las propiedades de la luz, de la camara, de los modelos 
      y de las animaciones.
    * Carga varios modelos a la vez.
@@ -40,7 +39,6 @@ Versión: 1.0.0b
 
 
 4. TECLAS RÁPIDAS
-	
    * CTRL + D = Añadir modelo
    * CTRL + R = Añadir arma
    * SUPR = Borra el modelo actual
@@ -57,6 +55,11 @@ Versión: 1.0.0b
    Javier Honorio Casado Fernández  
    José Angel Montelongo Reyes
 
+6. SCREENSHOTS
+
+   ![ScreenShot](https://raw.github.com/jhcasado/screenshots/master/Quake_II_Model_Viewer/vmd_02.png)
+   ![ScreenShot](https://raw.github.com/jhcasado/screenshots/master/Quake_II_Model_Viewer/vmd_03.png)
+   ![ScreenShot](https://raw.github.com/jhcasado/screenshots/master/Quake_II_Model_Viewer/vmd_04.png)
 
 
 Vmd usa GLF Library Version 1.3 de Roman Podobedov, Email: romka@ut.ee.
