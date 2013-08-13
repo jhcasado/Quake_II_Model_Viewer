@@ -1,10 +1,6 @@
-﻿
-=========================================================================================
-
-	Vmd: Visualizador de modelos de quake II
-	Versión: 1.0.0b 
-
-=========================================================================================
+﻿Vmd: Visualizador de modelos de quake II
+===============================
+Versión: 1.0.0b 
 
 
 0. EQUIPO RECOMENDADO
@@ -45,25 +41,25 @@
 
 4. TECLAS RÁPIDAS
 	
-  CTRL + D = Añadir modelo
-  CTRL + R = Añadir arma
-  SUPR = Borra el modelo actual
-  FLECHA DERECHA = Cambia al siguiente modelo
-  FLECHA IZQUIERDA = Cambia al modelo anterior
-  CRLT + M = Ventana con las propiedades de los modelos
-  CRTL + A = Ventana con las propiedades de las animaciones
-  CRTL + L = Ventana con las propiedades de la luz
-  CTRL + C = Ventana con las propiedades de la camara
+   * CTRL + D = Añadir modelo
+   * CTRL + R = Añadir arma
+   * SUPR = Borra el modelo actual
+   * FLECHA DERECHA = Cambia al siguiente modelo
+   * FLECHA IZQUIERDA = Cambia al modelo anterior
+   * CRLT + M = Ventana con las propiedades de los modelos
+   * CRTL + A = Ventana con las propiedades de las animaciones
+   * CRTL + L = Ventana con las propiedades de la luz
+   * CTRL + C = Ventana con las propiedades de la camara
 
 
 5. AUTORES
 
-   Javier Honorio Casado Fernández 
+   Javier Honorio Casado Fernández  
    José Angel Montelongo Reyes
 
 
 
-   Vmd usa GLF Library Version 1.3 de Roman Podobedov, Email: romka@ut.ee.
+Vmd usa GLF Library Version 1.3 de Roman Podobedov, Email: romka@ut.ee.
 
-   Copyright © All Rights Reserved.
-   QUAKE II(R) are registered trademarks of id Software, Inc.
+Copyright © All Rights Reserved.
+QUAKE II(R) are registered trademarks of id Software, Inc.
