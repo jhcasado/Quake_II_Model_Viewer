@@ -64,5 +64,5 @@ Versión: 1.0.0b
 
 Vmd usa GLF Library Version 1.3 de Roman Podobedov, Email: romka@ut.ee.
 
-Copyright © All Rights Reserved.
-QUAKE II(R) are registered trademarks of id Software, Inc.
+Copyright © All Rights Reserved.  
+QUAKE II ® are registered trademarks of id Software, Inc.
