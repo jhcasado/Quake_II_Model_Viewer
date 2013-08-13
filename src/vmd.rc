@@ -1,0 +1,690 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Español resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\vmd.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\vmd.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_VENTANA_MODELOS
+    BUTTON      ID_VENTANA_ANIMACIONES
+    BUTTON      ID_VENTANA_LUCES
+    BUTTON      ID_VENTANA_CAMARA
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&Archivo"
+    BEGIN
+        MENUITEM "Añadir &modelo...\tCtrl+D",   ID_ANADIR_MODELO
+        MENUITEM "Añadir &arma...\tCtrl+R",     ID_ANADIR_ARMA
+        MENUITEM SEPARATOR
+        MENUITEM "Textura m&odelo...",          ID_ARCHIVO_TEXTURA_MODELO
+        MENUITEM "Textura a&rma...",            ID_ARCHIVO_TEXTURA_ARMA
+        MENUITEM SEPARATOR
+        MENUITEM "&Borrar\tSupr",               ID_ARCHIVO_BORRAR_MODELO
+        MENUITEM SEPARATOR
+        MENUITEM "&Salir",                      ID_APP_EXIT
+    END
+    POPUP "&Herramientas"
+    BEGIN
+        MENUITEM "&Modelos...\tCtrl+M",         ID_VENTANA_MODELOS
+        MENUITEM "&Animaciones...\tCtrl+A",     ID_VENTANA_ANIMACIONES
+        MENUITEM "&Luces...\tCtrl+L",           ID_VENTANA_LUCES
+        MENUITEM "&Camara...\tCtrl+C",          ID_VENTANA_CAMARA
+    END
+    POPUP "&Opciones"
+    BEGIN
+        MENUITEM "Barra de &estado",            ID_VIEW_STATUS_BAR, CHECKED
+        MENUITEM "Barra de &herrmientas",       ID_VIEW_TOOLBAR, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "&Preferencias...",            ID_OPCIONES_PREFERENCIAS
+    END
+    POPUP "Ay&uda"
+    BEGIN
+        MENUITEM "&Acerca de vmd...",           ID_APP_ABOUT
+    END
+END
+
+IDR_MENU_EMERGENTE MENU 
+BEGIN
+    POPUP "Menu emergente"
+    BEGIN
+        POPUP "Herramientas"
+        BEGIN
+            MENUITEM "&Modelos...\tCtrl+M",         ID_VENTANA_MODELOS
+            MENUITEM "&Animaciones...\tCtrl+A",     ID_VENTANA_ANIMACIONES
+            MENUITEM "&Luces...\tCtrl+L",           ID_VENTANA_LUCES
+            MENUITEM "&Camara...\tCtrl+C",          ID_VENTANA_CAMARA
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Transformar"
+        BEGIN
+            MENUITEM "&Modelo",                     ID_MENUEMERGENTE_MODELO, CHECKED
+            MENUITEM "&Camara",                     ID_MENUEMERGENTE_CAMARA
+            MENUITEM "&Luz",                        ID_MENUEMERGENTE_LUZ
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Plano"
+        BEGIN
+            MENUITEM "&XY",                         ID_MENUEMERGENTE_XY, CHECKED
+            MENUITEM "X&Z",                         ID_MENUEMERGENTE_XZ
+            MENUITEM "Z&Y",                         ID_MENUEMERGENTE_ZY
+        END
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ACERCA_DE DIALOGEX 0, 0, 221, 169
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de Vmd"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_ACERCA_DE_CAJA,7,1,203,144
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,15,21,20
+    LTEXT           " Vmd: Visualizador de modelos de quake II",IDC_STATIC,39,17,151,11,SS_NOPREFIX
+    LTEXT           "Versión 1.0.0b",IDC_STATIC,41,29,117,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "Aceptar",IDOK,167,148,43,14,WS_GROUP
+    EDITTEXT        IDC_CREDITOS,14,44,189,90,ES_CENTER | ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_MODELOS_DIALOG DIALOGEX 0, 0, 187, 261
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Modelos"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ELEGIR_MODELOS,15,25,155,145,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Modelo...",IDC_B_MODELO,15,44,45,15,WS_GROUP
+    PUSHBUTTON      "Textura...",IDC_B_MODELO_TEXTURA,65,44,45,15,WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "Borrar",IDC_B_BORRAR_MODELO,115,44,45,15,WS_DISABLED | WS_GROUP
+    COMBOBOX        IDC_ELEGIR_ARMAS,15,86,155,145,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Arma...",IDC_B_ARMA,15,105,45,15,WS_GROUP
+    PUSHBUTTON      "Textura...",IDC_B_ARMA_TEXTURA,65,105,45,15,WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "Borrar",IDC_D_BORRAR_ARMA,115,105,45,15,WS_DISABLED | WS_GROUP
+    COMBOBOX        IDC_ELEGIR_SOMBREADO,15,145,105,77,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Color...",IDC_B_COLOR,125,144,45,15,WS_DISABLED | WS_GROUP
+    COMBOBOX        IDC_ELEGIR_CAJAS,15,185,105,77,CBS_DROPDOWNLIST | WS_DISABLED | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Color...",IDC_B_COLOR_CAJA,125,184,45,15,WS_DISABLED | WS_GROUP
+    CONTROL         "Strips and fans",IDC_CSTRIPS_FANS,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_GROUP | WS_TABSTOP,11,216,64,10
+    PUSHBUTTON      "Reset",IDC_B_RESET,80,214,45,15,WS_DISABLED | WS_GROUP
+    PUSHBUTTON      "Info...",IDC_B_INFO,130,214,45,15,WS_DISABLED | WS_GROUP
+    DEFPUSHBUTTON   "Cerrar",IDC_B_MODELOS_CERRAR,130,241,45,15
+    GROUPBOX        "Cajas ",IDC_CAJA_CAJAS,10,172,165,34,WS_DISABLED | WS_GROUP
+    GROUPBOX        "Opciones ",IDC_CAJA_BICHOS,5,1,175,235,WS_GROUP
+    GROUPBOX        "Modelos ",IDC_CAJA_MODELOS,10,12,165,54,WS_GROUP
+    GROUPBOX        "Armas ",IDC_CAJA_ARMAS,10,71,165,55,WS_GROUP
+    GROUPBOX        "Sombreado ",IDC_CAJA_SOMBREADO,10,131,165,35,WS_DISABLED | WS_GROUP
+END
+
+IDD_ANIMACIONES_DIALOG DIALOGEX 0, 0, 155, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Animaciones"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ELEGIR_ANIMACION,10,15,85,205,CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "Pause",IDC_B_ANIMACIONES_PLAY,100,14,45,15
+    CONTROL         "Slider1",IDC_SLIDER_INTER,"msctls_trackbar32",TBS_TOP | WS_TABSTOP,20,40,120,20
+    EDITTEXT        IDC_EDIT_FRAMES,15,85,34,15,ES_AUTOHSCROLL | ES_NUMBER | WS_DISABLED
+    CONTROL         "Spin1",IDC_CAMBIO_FRAME,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | WS_DISABLED,5,113,11,15
+    PUSHBUTTON      "Set",IDC_B_SET_FRAME,54,85,36,15,WS_DISABLED
+    PUSHBUTTON      "Reset",IDC_B_RESET_ANIM,100,91,45,15
+    DEFPUSHBUTTON   "Cerrar",IDC_B_ANIMACIONES_CERRAR,100,116,45,15
+    GROUPBOX        "Opciones ",IDC_CAJA_ANIMACIONES,5,1,145,109
+    GROUPBOX        "Velocidad ",IDC_CAJA_INTERPOLACION,10,30,135,35
+    GROUPBOX        "Frame ",IDC_CAJA_FRAME,10,70,85,35
+END
+
+IDD_LUCES_DIALOG DIALOGEX 0, 0, 155, 311
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Luces"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_POS_LUZ_X,45,23,95,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_POS_LUZ_Y,45,41,95,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_POS_LUZ_Z,45,60,95,15,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "Aplicar",IDC_B_LUZ_APLICAR,95,81,45,15,WS_GROUP
+    CONTROL         "Slider1",IDC_SLIDER_AMBIENTE,"msctls_trackbar32",TBS_TOP | WS_GROUP | WS_TABSTOP,14,115,125,20
+    CONTROL         "Slider1",IDC_SLIDER_DIFUSO,"msctls_trackbar32",TBS_TOP | WS_GROUP | WS_TABSTOP,14,155,125,20
+    CONTROL         "Slider1",IDC_SLIDER_ESPECULAR,"msctls_trackbar32",TBS_TOP | WS_GROUP | WS_TABSTOP,14,195,125,20
+    CONTROL         "Slider1",IDC_SLIDER_BRILLOS,"msctls_trackbar32",TBS_TOP | WS_GROUP | WS_TABSTOP,14,235,125,20
+    CONTROL         "A&ctivar",IDC_LUCES_ACTIVAS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,269,35,10
+    PUSHBUTTON      "Opciones",IDC_B_LUCES_OPCIONES,49,266,45,15,WS_GROUP
+    PUSHBUTTON      "Reset",IDC_B_LUCES_RESET,100,266,45,15,WS_GROUP
+    DEFPUSHBUTTON   "Cerrar",IDC_B_LUCES_CERRAR,100,290,45,15,WS_GROUP
+    GROUPBOX        "% Difuso ",IDC_CAJA_DIFUSO,10,145,135,35,WS_GROUP
+    GROUPBOX        "Opciones ",IDC_CAJA_LUCES,5,1,145,284
+    GROUPBOX        "% Ambiente ",IDC_CAJA_AMBIENTE,10,105,135,35,WS_GROUP
+    GROUPBOX        "Mover ",IDC_CAJA_LUCES_MOVER,10,11,135,89,WS_GROUP
+    LTEXT           "Eje x:",IDC_LABEL_EJE_X,19,27,18,8
+    LTEXT           "Eje y:",IDC_LABEL_EJE_Y,19,44,21,8
+    LTEXT           "Eje z:",IDC_LABEL_EJE_Z,19,63,20,8
+    GROUPBOX        "% Especular ",IDC_CAJA_ESPECULAR,10,185,135,35,WS_GROUP
+    GROUPBOX        "Brillos ",IDC_CAJA_BRILLOS,10,225,135,35,WS_GROUP
+END
+
+IDD_CAMARA_DIALOG DIALOGEX 0, 0, 132, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Camara"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FOV,53,15,67,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_ASPECX,53,34,67,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_EDIT_ASPECY,53,54,67,15,ES_AUTOHSCROLL | WS_GROUP
+    PUSHBUTTON      "Reset",IDC_B_CAMARA_RESET,25,76,45,15,WS_GROUP
+    PUSHBUTTON      "Aplicar",IDC_B_CAMARA_APLICAR,75,76,45,15,WS_GROUP
+    DEFPUSHBUTTON   "Cerrar",IDC_B_CAMARA_CERRAR,75,100,45,15
+    LTEXT           "FOV:",IDC_L_FOV,13,20,25,8
+    GROUPBOX        "Opciones ",IDC_CAJA_CAMARA,5,1,120,94
+    LTEXT           "Aspecto x:",IDC_L_CAMARA_ASPECX,13,36,35,10
+    LTEXT           "Aspecto y:",IDC_L_CAMARA_ASPECY,13,56,35,10
+END
+
+IDD_PREFERENCIAS_DIALOG DIALOG  0, 0, 132, 206
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferencias"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PREFERENCIAS_EDIT_VEL_TRAS_MOD,60,24,55,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PREFERENCIAS_EDIT_VEL_ROT_MOD,60,44,55,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PREFERENCIAS_EDIT_VEL_CAM_TRAS,60,79,55,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PREFERENCIAS_EDIT_VEL_CAM_ROT,60,99,55,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PREFERENCIAS_EDIT_VEL_TRAS_LUZ,60,134,55,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Color de fondo",IDC_B_COLOR_FONDO,65,166,60,15
+    DEFPUSHBUTTON   "Aceptar",IDOK,30,185,45,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,80,185,45,14
+    GROUPBOX        "Camara ",IDC_PREFERENCIAS_CAJA_VELOCIDAD_CAM,10,66,111,55
+    LTEXT           "Traslación:",IDC_PREFECENCIAS_L_CAM_TRAS,18,83,38,10
+    LTEXT           "Rotación:",IDC_PREFECENCIAS_L_CAM_ROT,18,102,31,8
+    LTEXT           "Traslación:",IDC_PREFECENCIAS_L_MODELO_TRAS,19,27,35,10
+    GROUPBOX        "Modelo ",IDC_PREFERENCIAS_CAJA_VELOCIDAD_MD,10,11,111,54
+    GROUPBOX        "Velocidad ",IDC_PREFERENCIAS_VELOCIDAD,6,2,120,159
+    LTEXT           "Traslación:",IDC_PREFECENCIAS_L_CAM_TRAS_LUZ,18,137,38,10
+    LTEXT           "Rotación:",IDC_PREFECENCIAS_L_MODELO_ROT,20,46,35,10
+    GROUPBOX        "Luz",IDC_PREFERENCIAS_CAJA_VELOCIDAD_LUZ,10,121,111,34
+    PUSHBUTTON      "Reset",ID_PREFERENCIAS_RESET,14,166,45,14
+END
+
+IDD_INFO_DIALOG DIALOG  0, 0, 177, 196
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Información"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Aceptar",IDOK,127,175,44,14
+    GROUPBOX        "Modelo ",IDC_INFO_CAJA_MODELOS,5,5,166,80,WS_GROUP
+    GROUPBOX        "Arma ",IDC_INFO_CAJA_ARMA,5,91,166,79,WS_GROUP
+    LTEXT           "Frames: ",IDC_INFO_MODELO_FRAMES,15,19,147,8
+    LTEXT           "Vertices: ",IDC_INFO_MODELO_VERTICES,15,30,147,8
+    LTEXT           "Caras: ",IDC_INFO_MODELO_CARAS,15,42,147,8
+    LTEXT           "Nº coordenadas de textura: ",IDC_INFO_MODELO_CT,15,55,147,8
+    LTEXT           "Nº comandos GL:  ",IDC_INFO_MODELO_GLC,15,67,147,8
+    LTEXT           "Frames: ",IDC_INFO_ARMA_FRAMES,15,104,147,8
+    LTEXT           "Vertices: ",IDC_INFO_ARMA_VERTICES,15,116,147,8
+    LTEXT           "Caras: ",IDC_INFO_ARMA_CARAS,15,128,147,8
+    LTEXT           "Nº coordenadas de textura: ",IDC_INFO_ARMA_CT,15,141,147,8
+    LTEXT           "Nº comandos GL:  ",IDC_INFO_ARMA_GLC,15,153,147,8
+END
+
+IDD_LUCES_OPCIONES_DIALOG DIALOG  0, 0, 117, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Opciones"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_LUZ_EDIT_PX,38,12,67,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_LUZ_EDIT_PY,38,32,67,15,ES_AUTOHSCROLL | WS_GROUP
+    EDITTEXT        IDC_LUZ_EDIT_PZ,38,53,67,15,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Mostrar luz",IDC_LUCES_MOSTRAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,87,50,10
+    DEFPUSHBUTTON   "Color",IDC_LUCES_COLOR,65,82,46,14
+    DEFPUSHBUTTON   "Aceptar",IDOK,15,104,46,14
+    PUSHBUTTON      "Cancelar",IDCANCEL,66,104,45,14
+    GROUPBOX        "Posición ",IDC_CAJA_LUZ_POS,5,1,106,74
+    LTEXT           "Eje x:",IDC_LABEL_EJE_X,14,17,18,8
+    LTEXT           "Eje y:",IDC_LABEL_EJE_Y,15,37,18,8
+    LTEXT           "Eje z:",IDC_LABEL_EJE_X3,15,57,18,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0c0a04b0"
+        BEGIN
+            VALUE "FileDescription", "Aplicación MFC vmd"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "vmd"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "vmd.EXE"
+            VALUE "ProductName", "Aplicación vmd"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc0a, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ACERCA_DE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_MODELOS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_ANIMACIONES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_LUCES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_CAMARA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_PREFERENCIAS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 125
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_INFO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_LUCES_OPCIONES_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 110
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "A",            ID_VENTANA_ANIMACIONES, VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_VENTANA_CAMARA,      VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_ANADIR_MODELO,       VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_VENTANA_LUCES,       VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_VENTANA_MODELOS,     VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_ANADIR_ARMA,         VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_ARCHIVO_BORRAR_MODELO, VIRTKEY, NOINVERT
+    VK_LEFT,        ID_CAMBIAR_MOD_IZQ,     VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_CAMBIAR_MOD_DER,     VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MODELOS_DIALOG DLGINIT
+BEGIN
+    IDC_ELEGIR_MODELOS, 0x403, 10, 0
+0x6e3c, 0x6e69, 0x7567, 0x6f6e, 0x003e, 
+    IDC_ELEGIR_ARMAS, 0x403, 10, 0
+0x6e3c, 0x6e69, 0x7567, 0x616e, 0x003e, 
+    IDC_ELEGIR_SOMBREADO, 0x403, 7, 0
+0x7550, 0x746e, 0x736f, "\000" 
+    IDC_ELEGIR_SOMBREADO, 0x403, 15, 0
+0x614d, 0x6c6c, 0x2061, 0x6564, 0x6820, 0x6c69, 0x736f, "\000" 
+    IDC_ELEGIR_SOMBREADO, 0x403, 6, 0
+0x6c50, 0x6e61, 0x006f, 
+    IDC_ELEGIR_SOMBREADO, 0x403, 10, 0
+0x7553, 0x7661, 0x7a69, 0x6461, 0x006f, 
+    IDC_ELEGIR_SOMBREADO, 0x403, 10, 0
+0x6554, 0x7478, 0x7275, 0x6461, 0x006f, 
+    IDC_ELEGIR_CAJAS, 0x403, 8, 0
+0x694e, 0x676e, 0x6e75, 0x0061, 
+    IDC_ELEGIR_CAJAS, 0x403, 9, 0
+0x7845, 0x6574, 0x6972, 0x726f, "\000" 
+    IDC_ELEGIR_CAJAS, 0x403, 6, 0
+0x6f54, 0x6164, 0x0073, 
+    0
+END
+
+IDD_ANIMACIONES_DIALOG DLGINIT
+BEGIN
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6f54, 0x6164, 0x0073, 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x7453, 0x6e61, 0x0064, 
+    IDC_ELEGIR_ANIMACION, 0x403, 4, 0
+0x7552, 0x006e, 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x7441, 0x6174, 0x6b63, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6150, 0x6e69, 0x0031, 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6150, 0x6e69, 0x0032, 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6150, 0x6e69, 0x0033, 
+    IDC_ELEGIR_ANIMACION, 0x403, 5, 0
+0x754a, 0x706d, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 5, 0
+0x6c46, 0x7069, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x6153, 0x756c, 0x6574, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6154, 0x6e75, 0x0074, 
+    IDC_ELEGIR_ANIMACION, 0x403, 5, 0
+0x6157, 0x6576, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 6, 0
+0x6f50, 0x6e69, 0x0074, 
+    IDC_ELEGIR_ANIMACION, 0x403, 8, 0
+0x7243, 0x7453, 0x6e61, 0x0064, 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x7243, 0x6157, 0x6b6c, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x7243, 0x6157, 0x6b6c, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 9, 0
+0x7243, 0x7441, 0x6174, 0x6b63, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 8, 0
+0x7243, 0x6150, 0x6e69, 0x0074, 
+    IDC_ELEGIR_ANIMACION, 0x403, 8, 0
+0x7243, 0x6544, 0x7461, 0x0068, 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x6544, 0x7461, 0x3168, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x6544, 0x7461, 0x3268, "\000" 
+    IDC_ELEGIR_ANIMACION, 0x403, 7, 0
+0x6544, 0x7461, 0x3368, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "vmd\n\nVmd\n\n\nVmd.Document\nVmd Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "vmd"
+    AFX_IDS_IDLEMESSAGE     "Preparado"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "MAY"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "DESP"
+    ID_INDICATOR_OVR        "SOB"
+    ID_INDICATOR_REC        "GRB"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPEN            "Añade un modelo a la lista\nAñadir modelo"
+    ID_FILE_CLOSE           "Cierra el documento activo\nCerrar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Muestra información del programa, número de versión y copyright\nAcerca de"
+    ID_APP_EXIT             "Sale de la aplicación\nSalir"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Abre este documento"
+    ID_FILE_MRU_FILE2       "Abre este documento"
+    ID_FILE_MRU_FILE3       "Abre este documento"
+    ID_FILE_MRU_FILE4       "Abre este documento"
+    ID_FILE_MRU_FILE5       "Abre este documento"
+    ID_FILE_MRU_FILE6       "Abre este documento"
+    ID_FILE_MRU_FILE7       "Abre este documento"
+    ID_FILE_MRU_FILE8       "Abre este documento"
+    ID_FILE_MRU_FILE9       "Abre este documento"
+    ID_FILE_MRU_FILE10      "Abre este documento"
+    ID_FILE_MRU_FILE11      "Abre este documento"
+    ID_FILE_MRU_FILE12      "Abre este documento"
+    ID_FILE_MRU_FILE13      "Abre este documento"
+    ID_FILE_MRU_FILE14      "Abre este documento"
+    ID_FILE_MRU_FILE15      "Abre este documento"
+    ID_FILE_MRU_FILE16      "Abre este documento"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Cambia a la siguiente sección de ventana\nSiguiente sección"
+    ID_PREV_PANE            "Vuelve a la sección de ventana anterior\nSección anterior"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Muestra u oculta la barra de herramientas\nAlternar Barra de herramientas"
+    ID_VIEW_STATUS_BAR      "Muestra u oculta la barra de estado\nAlternar Barra de estado"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Cambia el tamaño de la ventana"
+    AFX_IDS_SCMOVE          "Cambia la posición de la ventana"
+    AFX_IDS_SCMINIMIZE      "Reduce la ventana a un icono"
+    AFX_IDS_SCMAXIMIZE      "Agranda la ventana al tamaño completo"
+    AFX_IDS_SCNEXTWINDOW    "Cambia a la ventana del siguiente documento"
+    AFX_IDS_SCPREVWINDOW    "Cambia a la ventana del documento anterior"
+    AFX_IDS_SCCLOSE         "Cierra la ventana activa y le pide que guarde los documentos"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restaura la ventana a su tamaño normal"
+    AFX_IDS_SCTASKLIST      "Activa la lista de tareas"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ANADIR_MODELO        "Añade un modelo\nAñadir modelo"
+    ID_ANADIR_ARMA          "Añade un arma\nAñadir arma"
+    ID_VENTANA_MODELOS      "Ventana con los modelos\nModelos"
+    ID_VENTANA_ANIMACIONES  "Ventana con las animaciones\nAnimaciones"
+    ID_VENTANA_LUCES        "Ventana con las opciones de las luces\nLuces"
+    ID_VENTANA_CAMARA       "Ventana con las opciones de la camara\nCamara"
+    ID_OPCIONES_PREFERENCIAS "Preferencias\nPreferencias"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ARCHIVO_BORRAR_MODELO "Borra el modelo actual y su arma\nBorrar"
+    ID_MENUEMERGENTE_CAMARA "Selecciona la camara como objeto actual\nCamara"
+    ID_MENUEMERGENTE_LUCES  "Selecciona la luz como objeto actual\nLuz"
+    ID_MENUEMERGENTE_XY     "Realizar las transformaciones en el plano XY\nXY"
+    ID_MENUEMERGENTE_MODELO "Selecciona un modelo como objeto actual\nModelo"
+    ID_MENUEMERGENTE_XZ     "Realizar las transformaciones en el plano XZ\nXZ"
+    ID_MENUEMERGENTE_ZY     "Realizar las transformaciones en el plano ZY\nZY"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ARCHIVO_TEXTURA_MODELO 
+                            "Selecciona una textura para el modelo\nTextura modelo"
+    ID_ARCHIVO_TEXTURA_ARMA "Selecciona una textura para el arma\nTextura arma"
+    ID_MENUEMERGENTE_LUZ    "Selecciona la luz como objeto actual\nLUZ"
+END
+
+#endif    // Español resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\vmd.rc2"  // non-Microsoft Visual C++ edited resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
